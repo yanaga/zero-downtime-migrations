@@ -1,0 +1,2 @@
+docker run --name mysql-migrations -e MYSQL_ROOT_PASSWORD=admin -e MYSQL_DATABASE=migrations -e MYSQL_USER=yanaga -e MYSQL_PASSWORD=yanaga -p 3306:3306 -d mysql:5.7
+mysql -u yanaga -h 127.0.0.1 --port=3306 --password=yanaga migrations

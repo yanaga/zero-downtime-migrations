@@ -1,0 +1,10 @@
+swarm:
+  http:
+    port: 8080
+  datasources:
+    data-sources:
+      ExampleDS:
+        driver-name: mysql
+        connection-url: jdbc:mysql://127.0.0.1:3306/migrations
+        user-name: yanaga
+        password: yanaga
