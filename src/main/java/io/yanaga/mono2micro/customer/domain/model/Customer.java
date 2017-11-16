@@ -19,7 +19,7 @@ public class Customer implements Serializable {
     @PrePersist
     @PreUpdate
     void prePersist() {
-        this.lastname = surname;
+        this.surname = lastname;
     }
 
     protected Customer() {
@@ -42,12 +42,12 @@ public class Customer implements Serializable {
     }
 
     public Surname getSurname() {
-        return surname;
+        return lastname;
     }
 
-    public void setSurname(Surname surname) {
-        this.surname = surname;
-        this.lastname = surname;
+    public void setSurname(Surname lastname) {
+        this.lastname = lastname;
+        this.surname = lastname;
     }
 
 }
