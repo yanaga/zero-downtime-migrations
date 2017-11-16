@@ -21,7 +21,7 @@
                     <p:inputText id="name" value="${customerController.customer.name}" required="true" requiredMessage="Name is required"/>
                     <p:message for="name"/>
                     <p:outputLabel for="surname" value="Surname:"/>
-                    <p:inputText id="surname" value="${customerController.customer.surname}" required="true" requiredMessage="Surname is required"/>
+                    <p:inputText id="surname" value="${customerController.customer.lastname}" required="true" requiredMessage="Surname is required"/>
                     <p:message for="surname"/>
                     <h:panelGroup/>
                     <p:commandButton value="Save" action="#{customerController.save()}" update="@form"/>

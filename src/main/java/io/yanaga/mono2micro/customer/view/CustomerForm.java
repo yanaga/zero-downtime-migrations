@@ -23,7 +23,7 @@ public class CustomerForm implements Serializable {
     public Predicate toPredicate() {
         BooleanBuilder builder = new BooleanBuilder();
         name.append(builder, QCustomer.customer.name.stringValue());
-        surname.append(builder, QCustomer.customer.surname.stringValue());
+        surname.append(builder, QCustomer.customer.lastname.stringValue());
         return builder;
     }
 

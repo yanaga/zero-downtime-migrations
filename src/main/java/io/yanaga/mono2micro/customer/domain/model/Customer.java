@@ -12,15 +12,7 @@ public class Customer implements Serializable {
 
     private Name name;
 
-    private Surname surname;
-
     private Surname lastname;
-
-    @PrePersist
-    @PreUpdate
-    void prePersist() {
-        this.surname = lastname;
-    }
 
     protected Customer() {
     }
@@ -41,13 +33,12 @@ public class Customer implements Serializable {
         this.name = name;
     }
 
-    public Surname getSurname() {
+    public Surname getLastname() {
         return lastname;
     }
 
-    public void setSurname(Surname lastname) {
+    public void setLastname(Surname lastname) {
         this.lastname = lastname;
-        this.surname = lastname;
     }
 
 }
