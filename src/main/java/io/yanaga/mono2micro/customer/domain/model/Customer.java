@@ -14,6 +14,14 @@ public class Customer implements Serializable {
 
     private Surname surname;
 
+    private Surname lastname;
+
+    @PrePersist
+    @PreUpdate
+    void prePersist() {
+        this.lastname = surname;
+    }
+
     protected Customer() {
     }
 
@@ -39,6 +47,7 @@ public class Customer implements Serializable {
 
     public void setSurname(Surname surname) {
         this.surname = surname;
+        this.lastname = surname;
     }
 
 }
