@@ -1,0 +1,1 @@
+UPDATE Customer set lastname = surname;
